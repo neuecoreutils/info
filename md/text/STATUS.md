@@ -1,6 +1,8 @@
 STATUS.md
 ===
 
+For info on phases, check [PHASES.md](PHASES.md)
+
 Currently working components, their current phase and what they do:
 
 * `mkdir`   - Skeletal - makes a directory.
