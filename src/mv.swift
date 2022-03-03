@@ -12,7 +12,11 @@ import Foundation
 
 var FM = FileManager.default
 
-let cpitem = CommandLine.arguments[1]
-let todir = CommandLine.arguments[2]
+var fp1 = CommandLine.arguments[1]
+var fp2 = CommandLine.arguments[2]
 
-try FM.moveItem(atPath: cpitem, toPath: todir)
+do {
+    try FM.moveItem(atPath: fp1, toPath: fp2)
+} catch {
+    print(error)
+}

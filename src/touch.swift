@@ -13,7 +13,8 @@ import Foundation
 var FM = FileManager.default
 var fPath = CommandLine.arguments[1]
 
-if (FM.createFile(atPath: fPath, contents: nil, attributes: nil)) {
-} 
-else {
+do {
+    FM.createFile(atPath: fPath, contents: nil, attributes: nil)
+} catch {
+    print(error)
 }

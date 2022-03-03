@@ -18,6 +18,5 @@ do {
     print("Made directory at \(dPath).")
 } 
 catch {
-    print("Error making directory.")
-    
+    print(error)
 }

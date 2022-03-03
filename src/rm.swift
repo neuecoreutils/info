@@ -13,4 +13,9 @@ import Foundation
 var FM = FileManager.default
 
 var dPath = CommandLine.arguments[1]
-try FM.removeItem(atPath: dPath)
+
+do {
+    try FM.removeItem(atPath: dPath)
+} catch {
+    print(error)
+}

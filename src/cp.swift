@@ -11,8 +11,14 @@
 import Foundation
 
 var FM = FileManager.default
+var progName = "cp"
+var verNum = "1.0"
 
 let cpitem = CommandLine.arguments[1]
 let todir = CommandLine.arguments[2]
 
-try FM.copyItem(atPath: cpitem, toPath: todir)
+do {
+    try FM.copyItem(atPath: cpitem, toPath: todir)
+} catch {
+    print(error)
+}
