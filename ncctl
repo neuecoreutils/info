@@ -86,10 +86,13 @@ uninstall() {
 case "$1" in
     "--install")
         install
+    ;;
     "--build")
         build
+    ;;
     "--uninstall")
         uninstall
+    ;;
     *)
         echo "$0: Error: No command given."
         exit 127
