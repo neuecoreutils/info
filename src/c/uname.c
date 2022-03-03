@@ -1,5 +1,5 @@
 /*
- *  uname.c - A program to tell you what kind of Unix you are running
+ *  uname.c - A program that prints system information
  *
  *  Part of neueCoreutils.
  *
