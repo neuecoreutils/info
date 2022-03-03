@@ -2,7 +2,7 @@ neueCoreutils
 ===
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/xp-wdxp/neueCoreutils/main/md/image/NCHeader.svg" alt="NCHeader"/>
+  <img src="https://github.com/xp-wdxp/neueCoreutils/blob/main/md/image/NCHeader.svg?raw=true" alt="NCHeader"/>
 </p>
 
 
