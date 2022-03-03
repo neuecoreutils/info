@@ -41,7 +41,7 @@ build() {
     $swift_c src/ln.swift -o bin/NCln
     $swift_c src/ls.swift -o bin/NCls
     $swift_c src/mkdir.swift -o bin/NCmkdir
-    $swift_c src/rm.swift -o bin/rm
+    $swift_c src/rm.swift -o bin/NCrm
     $swift_c src/touch.swift -o bin/NCtouch
     $swift_c src/date.swift -o bin/NCdate
     $swift_c src/mv.swift -o bin/NCmv
