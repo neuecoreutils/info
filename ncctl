@@ -22,6 +22,9 @@ install() {
     install -m 0755 bin/NCrm $prefix/bin/NCrm
     install -m 0755 bin/NCdate $prefix/bin/NCdate
     install -m 0755 bin/NCuname $prefix/bin/NCuname
+    install -m 0755 bin/NCuname $prefix/bin/NCcp
+    install -m 0755 bin/NCuname $prefix/bin/NCmv
+    install -m 0755 bin/NCuname $prefix/bin/NCwhoami
     echo "Installed."    
     echo "Note that all Neuecoreutils apps have the 'NC' prefix."
 
@@ -69,6 +72,9 @@ uninstall() {
     rm -f $prefix/bin/NCrm
     rm -f $prefix/bin/NCuname
     rm -f $prefix/bin/NCdate
+    rm -f $prefix/bin/NCcp
+    rm -f $prefix/bin/NCmv
+    rm -f $prefix/bin/NCwhoami
 
     if [ $? == 1 ]; then
         echo "$0: Installation failed"
