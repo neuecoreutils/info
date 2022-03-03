@@ -5,7 +5,7 @@ neueCoreutils
 
 neueCoreutils is basically the [The GNU Coreutils](https://www.gnu.org/software/coreutils/) written in Swift.
 
-Fair warning, not **all** utilities are ported to Swift, and some of them are written in C, like `sha256sum` and `uname`.
+Fair warning, not **all** utilities are ported to Swift, and some of them are written in C, like `uname`.
 
 The end goal **is** to have a fully functioning coreutils system completely written in Swift.
 
