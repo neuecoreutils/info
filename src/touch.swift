@@ -1,5 +1,5 @@
 /*
- *  touch.c - Make a file.
+ *  touch.swift - Make a file.
  *
  *  Part of neueCoreutils.
  *

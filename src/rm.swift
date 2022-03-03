@@ -1,5 +1,5 @@
 /*
- *  rm.c - Remove a file or a directory.
+ *  rm.swift - Remove a file or a directory.
  *
  *  Part of neueCoreutils.
  *

@@ -1,5 +1,5 @@
 /*
- *  ls.c - List files in a directory.
+ *  ls.swift - List files in a directory.
  *
  *  Part of neueCoreutils.
  *

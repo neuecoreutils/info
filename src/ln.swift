@@ -1,5 +1,5 @@
 /*
- *  ln.c - Link a file or a directory.
+ *  ln.swift - Link a file or a directory.
  *
  *  Part of neueCoreutils.
  *

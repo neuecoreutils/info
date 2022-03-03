@@ -1,5 +1,5 @@
 /*
- *  mkdir.c - Make a directory.
+ *  mkdir.swift - Make a directory.
  *
  *  Part of neueCoreutils.
  *
