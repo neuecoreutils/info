@@ -11,4 +11,4 @@ Most of the heavylifting is done by [the build script](ncctl), so you don't need
     $ ./ncctl --build
 
 ### Installing
-    $ ./ncctl --install --bindir=bin/
+    $ ./ncctl --install
