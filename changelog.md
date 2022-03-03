@@ -9,13 +9,17 @@ Here are all the changes, known issues, and links to the release downloads.
 * `mv` and `cp` cannot paste directly to a directory.
 
 Example, mv needs to be used like this:
-    $ NCmv foo /path/to/paste/foo
+```sh
+$ NCmv foo /path/to/paste/foo
+```
 Not like this:
-    $ NCmv foo /path/to/paste/
-
+```sh
+$ NCmv foo /path/to/paste/
+```
 * `date` can only show one type of date system
 
 * `ln` has unintended side effects and is unusable
 
 ### Downloads
 
+Available at releases.
