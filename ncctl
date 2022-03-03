@@ -37,6 +37,9 @@ build() {
     swiftc src/rm.swift -o bin/rm
     swiftc src/touch.swift -o bin/NCtouch
     swiftc src/date.swift -o bin/NCdate
+    swiftc src/mv.swift -o bin/NCmv
+    swiftc src/cp.swift -o bin/NCcp
+    swiftc src/whoami.swift -o bin/NCwhoami
     gcc src/c/uname.c -o bin/NCuname
 
     if [ $? == 1 ]; then
