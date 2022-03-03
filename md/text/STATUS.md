@@ -18,6 +18,9 @@ Currently working components, the language they are written in, their current ph
 Phase name and how many components are in said phase
 
 Skeletal            --   6 component(s)
+
 Muscular            --   0 component(s)
+
 Musculoskeletal     --   0 component(s)
+
 Mechanical          --   0 component(s)
