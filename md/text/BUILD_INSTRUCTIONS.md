@@ -2,7 +2,8 @@
 
 Dependencies:
 
- * swift-lang
+ * A Swift compiler
+ * A C compiler
 
 Most of the heavylifting is done by [the build script](ncctl), so you don't need to do much.
 

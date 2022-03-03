@@ -3,9 +3,16 @@
 # ncctl - build and/or install coreutils.
 # Warn: this may not work.
 
+# Point ncctl to the appropriate directories according to your need.
+
 src='./src/'
 bin='./bin/'
 prefix='/usr'
+
+# Change the compiler according to your need
+
+swift_c='swiftc'
+cc='gcc'
 
 install() {
     install -m 0755 bin/NCmkdir $prefix/bin/NCmkdir    
@@ -31,16 +38,16 @@ install() {
 
 build() {
     mkdir bin/
-    swiftc src/ln.swift -o bin/NCln
-    swiftc src/ls.swift -o bin/NCls
-    swiftc src/mkdir.swift -o bin/NCmkdir
-    swiftc src/rm.swift -o bin/rm
-    swiftc src/touch.swift -o bin/NCtouch
-    swiftc src/date.swift -o bin/NCdate
-    swiftc src/mv.swift -o bin/NCmv
-    swiftc src/cp.swift -o bin/NCcp
-    swiftc src/whoami.swift -o bin/NCwhoami
-    gcc src/c/uname.c -o bin/NCuname
+    $swift_c src/ln.swift -o bin/NCln
+    $swift_c src/ls.swift -o bin/NCls
+    $swift_c src/mkdir.swift -o bin/NCmkdir
+    $swift_c src/rm.swift -o bin/rm
+    $swift_c src/touch.swift -o bin/NCtouch
+    $swift_c src/date.swift -o bin/NCdate
+    $swift_c src/mv.swift -o bin/NCmv
+    $swift_c src/cp.swift -o bin/NCcp
+    $swift_c src/whoami.swift -o bin/NCwhoami
+    $cc src/c/uname.c -o bin/NCuname
 
     if [ $? == 1 ]; then
         echo "$0: Compilation failed"
