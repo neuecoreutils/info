@@ -10,10 +10,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <errno.h>
 #include <sys/utsname.h>
 
-int main(int argc, char **argv[]) {
+int main(int argc, char *argv[]) {
    struct utsname buffer;
 
    errno = 0;
@@ -38,11 +39,9 @@ int main(int argc, char **argv[]) {
    else if (strcmp("-m", argv[1]) == 0) {
       printf("%s\n", buffer.machine);
    }
+   else {
+      printf("%s\n", buffer.sysname);
+   }
 
    return EXIT_SUCCESS;
 }
-
-   // printf("Hostname:     %s\n", buffer.nodename);
-   // printf("Release:      %s\n", buffer.release);
-   // printf("Version:      %s\n", buffer.version);
-   // printf("Architecture: %s\n", buffer.machine);
