@@ -30,4 +30,5 @@ Phase name and how many components are in said phase:
 | Muscular         |  1 component(s)  |
 | Musculoskeletal  |  0 component(s)  |
 | Mechanical       |  1 component(s)  |
+| Innovative       |  1 component(s)  |
 | Total            |  10 component(s) |

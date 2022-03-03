@@ -24,5 +24,9 @@ There are four phases for this project:
     Fully operable coreutils system.
     Full compatibility with Unix components.
 
-Components: `all`
+**[5] Innovative**
+
+    Same as `Mechanical` with extra unorthodox functions.
+    
+
 
