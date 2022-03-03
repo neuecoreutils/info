@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # ncctl - build and/or install coreutils.
+# Warn: this may not work.
 
 src='./src/'
 bin='./bin/'

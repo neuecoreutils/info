@@ -13,8 +13,7 @@
 #include <errno.h>
 #include <sys/utsname.h>
 
-int main(void) {
-
+int main(int argc, char **argv[]) {
    struct utsname buffer;
 
    errno = 0;
@@ -23,15 +22,27 @@ int main(void) {
       exit(EXIT_FAILURE);
    }
 
-   printf("System:       %s\n", buffer.sysname);
-   printf("Hostname:     %s\n", buffer.nodename);
-   printf("Release:      %s\n", buffer.release);
-   printf("Version:      %s\n", buffer.version);
-   printf("Architecture: %s\n", buffer.machine);
-
-   #ifdef _GNU_SOURCE
-     printf("Domain name:  %s\n", buffer.domainname);
-   #endif
+   
+   if(strcmp("-s", argv[1]) == 0) {
+      printf("%s\n", buffer.sysname);
+   }
+   else if (strcmp("-n", argv[1]) == 0) {
+      printf("%s\n", buffer.nodename);
+   }
+   else if (strcmp("-r", argv[1]) == 0) {
+      printf("%s\n", buffer.release);
+   }
+   else if (strcmp("-v", argv[1]) == 0) {
+      printf("%s\n", buffer.version);
+   }
+   else if (strcmp("-m", argv[1]) == 0) {
+      printf("%s\n", buffer.machine);
+   }
 
    return EXIT_SUCCESS;
 }
+
+   // printf("Hostname:     %s\n", buffer.nodename);
+   // printf("Release:      %s\n", buffer.release);
+   // printf("Version:      %s\n", buffer.version);
+   // printf("Architecture: %s\n", buffer.machine);
