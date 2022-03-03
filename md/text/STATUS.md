@@ -14,8 +14,8 @@ Currently working components, the language they are written in, their current ph
 * `rm`       - Swift - Skeletal          - deletes files and/or folders
 * `touch`    - Swift - Skeletal          - makes a file
 * `date`     - Swift - Skeletal          - prints the date in one format only
-* `mv`       - Swift - Skeletal          - untested
-* `cp`       - Swift - Skeletal          - untested
+* `mv`       - Swift - Skeletal          - unusable
+* `cp`       - Swift - Skeletal          - unusable
 * `whoami`   - Swift - Mechanical        - Full compatibility.
 * `uname`    - C     - Muscular          - prints system information
 ```
