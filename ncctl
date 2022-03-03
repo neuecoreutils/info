@@ -13,32 +13,42 @@ install() {
     install -m 0755 bin/ln $prefix/bin/NCln    
     install -m 0755 bin/ls $prefix/bin/NCls    
     install -m 0755 bin/rm $prefix/bin/NCrm
+    install -m 0755 bin/date $prefix/bin/NCdate
+    install -m 0755 bin/uname $prefix/bin/NCuname
     echo "Installed."    
     echo "Note that all Neuecoreutils apps have the 'NC' prefix."
 
     if [ $? == 1 ]; then
         echo "$0: Installation failed"
+        exit 1
     elif [ $? == 0 ]; then
         echo "$0: Installation successful."
+        exit 0
     else
         echo "$0: Unknown error?"
+        exit 1
     fi    
 }
 
 build() {
     mkdir bin/
-    swift-lang src/ln -o bin/ln
-    swift-lang src/ls -o bin/ls
-    swift-lang src/mkdir -o bin/mkdir
-    swift-lang src/rm -o bin/rm
-    swift-lang src/touch -o bin/touch
+    swiftc src/ln.swift -o bin/ln
+    swiftc src/ls.swift -o bin/ls
+    swiftc src/mkdir.swift -o bin/mkdir
+    swiftc src/rm.swift -o bin/rm
+    swiftc src/touch.swift -o bin/touch
+    swiftc src/date.swift -o bin/date
+    swiftc src/c/uname.swift -o bin/uname
 
     if [ $? == 1 ]; then
         echo "$0: Compilation failed"
+        exit 1
     elif [ $? == 0 ]; then
         echo "$0: Compilation successful."
+        exit 0
     else
         echo "$0: Unknown error?"
+        exit 1
     fi
 }
 
@@ -48,14 +58,16 @@ uninstall() {
     rm -f $prefix/bin/NCln    
     rm -f $prefix/bin/NCls    
     rm -f $prefix/bin/NCrm
-    echo "$0: Neuecoreutils have been uninstalled."    
 
     if [ $? == 1 ]; then
-        echo "Installation failed"
+        echo "$0: Installation failed"
+        exit 1
     elif [ $? == 0 ]; then
-        echo "Installation successful."
+        echo "$0: Neuecoreutils have been uninstalled."
+        exit 0
     else
-        echo "Unknown error?"
+        echo "$0: Unknown error?"
+        exit 1
     fi    
 }
 
@@ -69,4 +81,5 @@ case "$1" in
         uninstall
     *)
         echo "$0: Error: No command given."
+        exit 127
 esac
