@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+
+# ncctl - build and/or install coreutils.
+
+src='./src/'
+bin='./bin/'
+prefix='/usr'
+
+install() {
+    install -m 0755 bin/mkdir $prefix/bin/NCmkdir    
+    install -m 0755 bin/touch $prefix/bin/NCtouch    
+    install -m 0755 bin/ln $prefix/bin/NCln    
+    install -m 0755 bin/ls $prefix/bin/NCls    
+    install -m 0755 bin/rm $prefix/bin/NCrm
+    echo "Installed."    
+    echo "Note that all Neuecoreutils apps have the 'NC' prefix."
+
+    if [ $? == 1 ]; then
+        echo "$0: Installation failed"
+    elif [ $? == 0 ]; then
+        echo "$0: Installation successful."
+    else
+        echo "$0: Unknown error?"
+    fi    
+}
+
+build() {
+    mkdir bin/
+    swift-lang src/ln -o bin/ln
+    swift-lang src/ls -o bin/ls
+    swift-lang src/mkdir -o bin/mkdir
+    swift-lang src/rm -o bin/rm
+    swift-lang src/touch -o bin/touch
+
+    if [ $? == 1 ]; then
+        echo "$0: Compilation failed"
+    elif [ $? == 0 ]; then
+        echo "$0: Compilation successful."
+    else
+        echo "$0: Unknown error?"
+    fi
+}
+
+uninstall() {
+    rm -f $prefix/bin/NCmkdir    
+    rm -f $prefix/bin/NCtouch    
+    rm -f $prefix/bin/NCln    
+    rm -f $prefix/bin/NCls    
+    rm -f $prefix/bin/NCrm
+    echo "$0: Neuecoreutils have been uninstalled."    
+
+    if [ $? == 1 ]; then
+        echo "Installation failed"
+    elif [ $? == 0 ]; then
+        echo "Installation successful."
+    else
+        echo "Unknown error?"
+    fi    
+}
+
+
+case "$1" in
+    "--install")
+        install
+    "--build")
+        build
+    "--uninstall")
+        uninstall
+    *)
+        echo "$0: Error: No command given."
+esac
