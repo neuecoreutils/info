@@ -1,4 +1,4 @@
-![ncMarkdown-Build](md/image/NCMarkdown-Build.svg)
+![ncMarkdown-Build](../image/NCMarkdown-Build.svg)
 
 Dependencies:
 

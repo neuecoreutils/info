@@ -1,4 +1,4 @@
-![ncMarkdown.Phases](md/image/NCMarkdown-Phases.svg)
+![ncMarkdown.Phases](../image/NCMarkdown-Phases.svg)
 
 There are four phases for this project:
 
