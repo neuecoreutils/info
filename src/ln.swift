@@ -18,9 +18,9 @@ let progname = CommandLine.arguments[0]
 
 switch CommandLine.arguments[1] {
     case "-s":
-        FM.createSymbolicLink(atPath: fpath, withDestinationPath: olink)
+        try FM.createSymbolicLink(atPath: fpath, withDestinationPath: olink)
     case "-l":
-        FM.linkItem(atPath: fpath, toPath: olink)
+        try FM.linkItem(atPath: fpath, toPath: olink)
     default:
         print("\(progname): no command provided.")
         exit(127)

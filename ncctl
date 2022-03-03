@@ -8,13 +8,13 @@ bin='./bin/'
 prefix='/usr'
 
 install() {
-    install -m 0755 bin/mkdir $prefix/bin/NCmkdir    
-    install -m 0755 bin/touch $prefix/bin/NCtouch    
-    install -m 0755 bin/ln $prefix/bin/NCln    
-    install -m 0755 bin/ls $prefix/bin/NCls    
-    install -m 0755 bin/rm $prefix/bin/NCrm
-    install -m 0755 bin/date $prefix/bin/NCdate
-    install -m 0755 bin/uname $prefix/bin/NCuname
+    install -m 0755 bin/NCmkdir $prefix/bin/NCmkdir    
+    install -m 0755 bin/NCtouch $prefix/bin/NCtouch    
+    install -m 0755 bin/NCln $prefix/bin/NCln    
+    install -m 0755 bin/NCls $prefix/bin/NCls    
+    install -m 0755 bin/NCrm $prefix/bin/NCrm
+    install -m 0755 bin/NCdate $prefix/bin/NCdate
+    install -m 0755 bin/NCuname $prefix/bin/NCuname
     echo "Installed."    
     echo "Note that all Neuecoreutils apps have the 'NC' prefix."
 
@@ -26,19 +26,18 @@ install() {
         exit 0
     else
         echo "$0: Unknown error?"
-        exit 1
     fi    
 }
 
 build() {
     mkdir bin/
-    swiftc src/ln.swift -o bin/ln
-    swiftc src/ls.swift -o bin/ls
-    swiftc src/mkdir.swift -o bin/mkdir
+    swiftc src/ln.swift -o bin/NCln
+    swiftc src/ls.swift -o bin/NCls
+    swiftc src/mkdir.swift -o bin/NCmkdir
     swiftc src/rm.swift -o bin/rm
-    swiftc src/touch.swift -o bin/touch
-    swiftc src/date.swift -o bin/date
-    swiftc src/c/uname.swift -o bin/uname
+    swiftc src/touch.swift -o bin/NCtouch
+    swiftc src/date.swift -o bin/NCdate
+    gcc src/c/uname.c -o bin/NCuname
 
     if [ $? == 1 ]; then
         echo "$0: Compilation failed"
@@ -58,6 +57,8 @@ uninstall() {
     rm -f $prefix/bin/NCln    
     rm -f $prefix/bin/NCls    
     rm -f $prefix/bin/NCrm
+    rm -f $prefix/bin/NCuname
+    rm -f $prefix/bin/NCdate
 
     if [ $? == 1 ]; then
         echo "$0: Installation failed"

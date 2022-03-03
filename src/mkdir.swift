@@ -14,7 +14,7 @@ var FM = FileManager.default
 var dPath = CommandLine.arguments[1]
 
 do {
-    FM.createDirectory(atPath: dPath, withIntermediateDirectories: true, attributes: nil)
+    try FM.createDirectory(atPath: dPath, withIntermediateDirectories: true, attributes: nil)
     print("Made directory at \(dPath).")
 } 
 catch {
