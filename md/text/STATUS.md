@@ -15,7 +15,7 @@ Currently working components, the language they are written in, their current ph
 
 **Phase Stats**
 
-Phase name and how many components are in said phase
+Phase name and how many components are in said phase:
 
 | Phase Name       | Components       |
 | ---------------- | ---------------- |
