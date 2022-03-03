@@ -20,6 +20,8 @@ $ NCmv foo /path/to/paste/
 
 * `ln` has unintended side effects and is unusable
 
+* `uname` without any arguments causes a segfault
+
 ### Downloads
 
 Available at releases.
