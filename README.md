@@ -1,7 +1,10 @@
 neueCoreutils
 ===
 
-![ncHeader](md/image/NCHeader.svg)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/xp-wdxp/neueCoreutils/main/md/image/NCHeader.svg" alt="NCHeader"/>
+</p>
+
 
 neueCoreutils is basically the [The GNU Coreutils](https://www.gnu.org/software/coreutils/) written in Swift.
 
