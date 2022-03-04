@@ -28,6 +28,10 @@ By my gracious hands, every tarball that you download from [Releases] has a simp
 
 Check the [build instructions page.](md/text/BUILD_INSTRUCTIONS.md)
 
-## List of components and their "phase"
+## List of components and their "phases"
 
 Check the [status page.](md/text/STATUS.md)
+
+## Roadmap
+
+See the roadmap [here.](md/text/ROADMAP.md)
