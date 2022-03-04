@@ -24,23 +24,26 @@ int main(int argc, char *argv[]) {
    }
 
    
-   if(strcmp("-s", argv[1]) == 0) {
+   if(argc > 1 && strcmp("-s", argv[1]) == 0) {
       printf("%s\n", buffer.sysname);
    }
-   else if (strcmp("-n", argv[1]) == 0) {
+   else if (argc > 1 && strcmp("-n", argv[1]) == 0) {
       printf("%s\n", buffer.nodename);
    }
-   else if (strcmp("-r", argv[1]) == 0) {
+   else if (argc > 1 && strcmp("-r", argv[1]) == 0) {
       printf("%s\n", buffer.release);
    }
-   else if (strcmp("-v", argv[1]) == 0) {
+   else if (argc > 1 && strcmp("-v", argv[1]) == 0) {
       printf("%s\n", buffer.version);
    }
-   else if (strcmp("-m", argv[1]) == 0) {
+   else if (argc > 1 && strcmp("-m", argv[1]) == 0) {
       printf("%s\n", buffer.machine);
    }
-   else {
+   else if (argc == 1){
       printf("%s\n", buffer.sysname);
+   }
+   else {
+      printf("uname: invalid option -- '%s'\n", argv[1]);
    }
 
    return EXIT_SUCCESS;
