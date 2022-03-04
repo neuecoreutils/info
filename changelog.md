@@ -1,3 +1,5 @@
+# neueCoreutils Changelog
+
 Release 0.1.1a
 ===
 
@@ -7,11 +9,13 @@ This is a bug fix update.
 
 * added `test`
 
-* fixed an issue in `uname` which caused it to segfault without any arguments given to it (`153bfff`)
+* fixed an issue in all components which caused it to segfault without any arguments given to it - (`153bfff` `929e388`)
 
 ### Downloads
 
 Currently unavailable
+
+---
 
 Release 0.1a
 ===
