@@ -12,24 +12,27 @@
 import Foundation
 
 var operand = CommandLine.arguments[1]
-var tn = CommandLine.arguments[2]
-var tnn = CommandLine.arguments[3]
+let tn = CommandLine.arguments[2]
+let tnn = CommandLine.arguments[3]
+let tnIsEmpty = tn.isEmpty
+
+if tnn.isEmpty == true { let tnn = 0 }
 
 switch operand {
     case "-z":
-        if tn == 0 {
-            print("\(tn) = 0")
-        }
+        if tnIsEmpty == true { 
+            print("var1 is empty.") 
+            }
         else {
-            print("\(tn) != 0")
-        }
+            print("var1 isn't empty.") 
+            }
     case "-n":
-        if tn > 0 {
-            print("\(tn) > 0")
-        }
+        if tnIsEmpty == false { 
+            print("var1 isn't empty.") 
+            }
         else {
-            print("\(tn) < 0")
-        }
+            print("var1 is empty.") 
+            }    
     case "-eq":
         if tn == tnn {
             print("\(tn) = \(tnn)")
@@ -38,7 +41,7 @@ switch operand {
             print("\(tn) !=  \(tnn)")
         }
     case "-ne":
-        if tn == tnn {
+        if tn != tnn {
             print("\(tn) != \(tnn)")
         }
         else {
@@ -60,18 +63,18 @@ switch operand {
         }
     case "-ge":
         if tn >= tnn {
-            print("\(tn) > \(tnn)")
+            print("\(tn) >= \(tnn)")
         }
         else {
-            print("\(tn) <  \(tnn)")
+            print("\(tn) <= \(tnn)")
         }
     case "-le":
         if tn <= tnn {
-            print("\(tn) > \(tnn)")
+            print("\(tn) <= \(tnn)")
         }
         else {
-            print("\(tn) <  \(tnn)")
+            print("\(tn) >= \(tnn)")
         }
     default:
-        print("test (neueCoreutils) 0.0a")
+        print("test: No command given")
 }
