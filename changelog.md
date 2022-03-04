@@ -22,6 +22,8 @@ $ NCmv foo /path/to/paste/
 
 * `uname` without any arguments causes a segfault
 
+* `test` is a bit fuzzy but "usable"
+
 ### Downloads
 
 Currently unavailable.
