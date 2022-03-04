@@ -24,4 +24,4 @@ $ NCmv foo /path/to/paste/
 
 ### Downloads
 
-Available at releases.
+Currently unavailable.
