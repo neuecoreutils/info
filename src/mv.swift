@@ -11,6 +11,12 @@
 import Foundation
 
 var FM = FileManager.default
+var progName = CommandLine.arguments[0]
+
+if CommandLine.argc == 1 {
+    print("\(progName): missing operand")
+    exit(1)
+}
 
 var fp1 = CommandLine.arguments[1]
 var fp2 = CommandLine.arguments[2]

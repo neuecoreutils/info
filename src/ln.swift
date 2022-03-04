@@ -12,17 +12,18 @@ import Foundation
 
 var FM = FileManager.default
 
-let fpath = CommandLine.arguments[2]
-let olink = CommandLine.arguments[3]
-let progname = CommandLine.arguments[0]
+var fpath = CommandLine.arguments[2]
+var olink = CommandLine.arguments[3]
+var progName = CommandLine.arguments[0]
 
-switch CommandLine.arguments[1] {
-    case "-s":
+if CommandLine.argc == 1 {
+    print("\(progName): missing operand")
+    exit(1)
+}
+
+if CommandLine.arguments[1] == "-s" {
         try FM.createSymbolicLink(atPath: fpath, withDestinationPath: olink)
-    case "-l":
+}
+if CommandLine.arguments[1] == "-l" {
         try FM.linkItem(atPath: fpath, toPath: olink)
-    default:
-        print("\(progname): no command provided.")
-        exit(127)
-        
 }

@@ -13,12 +13,14 @@ import Foundation
 let fullname = NSFullUserName()
 let username = NSUserName()
 
+if CommandLine.argc == 1 {
+    print("\(username)")
+    exit(0)
+}
+
 for arg in CommandLine.arguments {
     if (arg == "-f") {
         print("\(fullname)")
         exit(0)
     }
 }
-
-print("\(username)")
-exit(0)

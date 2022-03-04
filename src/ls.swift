@@ -11,31 +11,32 @@
 import Foundation
 
 var FM = FileManager.default
+var progName = CommandLine.arguments[0]
 
-for arg in CommandLine.arguments {
-    switch arg {
-        case "-d":
-            let apath = CommandLine.arguments[2]
-            let fnf = try FM.contentsOfDirectory(atPath: apath)
-            print("Listing files in directory \(apath).")
-            for f in fnf {
-                print("\(f)")
-            }
+if CommandLine.argc == 1 {
+        let path = FileManager.default.currentDirectoryPath
+        let fnf = try FM.contentsOfDirectory(atPath: path)        
+        print("Listing files in directory \(path).")
+        
+        for f in fnf {
+            print("\(f)")
+        }
+}
 
-        case "-Sd":
+if CommandLine.argc == 2 {
+    let apath = CommandLine.arguments[1]
+    let fnf = try FM.contentsOfDirectory(atPath: apath)
+    print("Listing files in directory \(apath).")
+    for f in fnf {
+        print("\(f)")
+    }
+}
+
+if CommandLine.arguments[1] == "-lS" {
             let bpath = CommandLine.arguments[2]
             let fnf = try FM.subpathsOfDirectory(atPath: bpath)
             print("Listing subdirectories in directory \(bpath).")
             for f in fnf {
                 print("\(f)")
             }
-        default:
-            let path = FileManager.default.currentDirectoryPath
-            let fnf = try FM.contentsOfDirectory(atPath: path)        
-            print("Listing files in directory \(path).")
-
-            for f in fnf {
-                print("\(f)")
-            }
-    }
 }

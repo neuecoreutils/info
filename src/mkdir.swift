@@ -12,6 +12,12 @@ import Foundation
 
 var FM = FileManager.default
 var dPath = CommandLine.arguments[1]
+var progName = CommandLine.arguments[0]
+
+if CommandLine.argc == 1 {
+    print("\(progName): missing operand")
+    exit(1)
+}
 
 do {
     try FM.createDirectory(atPath: dPath, withIntermediateDirectories: true, attributes: nil)
