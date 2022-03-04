@@ -5,7 +5,7 @@ This is a bug fix update.
 
 ### Changes
 
-* added `test` as a alpha application.
+* added `test` as a test application.
 
 * fixed an issue in `uname` which caused it to segfault without any arguments given to it (`153bfff`)
 
