@@ -23,7 +23,7 @@ Some apps are literally test applications (i.e. they don't do much other than pr
 
 Along with this, not all utilities are ported to Swift, and some of them are completely written in C, like `uname`.
 
-Also, all neuecoreutils components once compiled will have a `NC` suffix, like `NCmkdir`.y
+Also, all neuecoreutils components once compiled will have a `NC` suffix, like `NCmkdir`.
 
 ## How do I install this?
 
