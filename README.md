@@ -8,21 +8,26 @@ neueCoreutils
 
 neueCoreutils is basically the [The GNU Coreutils](https://www.gnu.org/software/coreutils/) written in Swift.
 
-Fair warning, not **all** utilities are ported to Swift, and some of them are written in C, like `uname`.
 
-The end goal **is** to have a fully functioning coreutils system completely written in Swift.
+The end goal is to have a fully functioning coreutils system completely written in Swift.
 
-Also am a complete noob. So don't @me for the bad code.
+Also am a complete noob at Swift. So don't @me for the bad code.
 
 Coded and tested on Fedora Workstation 35.
 
-## Why?
+## Warning
 
-I was bored.
+neueCoreutils is in alpha-stage. It is highly experimental and you should not expect it to be a full replacement to GNU coreutils for some time.
+
+Some apps are literally test applications (i.e. they don't do much other than print some info).
+
+Along with this, not all utilities are ported to Swift, and some of them are completely written in C, like `uname`.
+
+Also, all neuecoreutils components once compiled will have a `NC` suffix, like `NCmkdir`.y
 
 ## How do I install this?
 
-By my gracious hands, every tarball that you download from [Releases] has a simple to use script to install neueCoreutils.
+You can use `ncctl` to compile, install, and uninstall neuecoreutils.
 
 ## How do I compile this?
 
