@@ -25,7 +25,7 @@ if CommandLine.argc == 1 {
 let dPath = CommandLine.arguments[1]
 
 /* 
- * The command below doesn't work, will fix later 
+ * The command below doesn't work, will fix later
  *
 if CommandLine.argc > 1 && CommandLine.arguments[1] == "-f" { var dPath = CommandLine.arguments[2] }
  */
