@@ -11,15 +11,16 @@
 import Foundation
 
 var FM = FileManager.default
-
-var fpath = CommandLine.arguments[2]
-var olink = CommandLine.arguments[3]
 var progName = CommandLine.arguments[0]
 
 if CommandLine.argc == 1 {
     print("\(progName): missing operand")
     exit(1)
 }
+
+var fpath = CommandLine.arguments[2]
+var olink = CommandLine.arguments[3]
+
 
 if CommandLine.arguments[1] == "-s" {
         try FM.createSymbolicLink(atPath: fpath, withDestinationPath: olink)

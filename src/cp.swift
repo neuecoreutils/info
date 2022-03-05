@@ -11,7 +11,6 @@
 import Foundation
 
 var FM = FileManager.default
-var progName = "cp"
 var verNum = "1.0"
 var progName = CommandLine.arguments[0]
 
