@@ -8,20 +8,40 @@
  * 
  */
 
+// Importing Foundation
 import Foundation
 
+// Setting up FileManager 
 var FM = FileManager.default
 var progName = CommandLine.arguments[0]
 
+// If there are no arguments given, exit immediately
 if CommandLine.argc == 1 {
     print("\(progName): missing operand")
     exit(1)
 }
 
-var dPath = CommandLine.arguments[1]
+// Command line argument for taking directory path
 
-do {
-    try FM.removeItem(atPath: dPath)
-} catch {
-    print(error)
+if CommandLine.argc > 1 && CommandLine.arguments[1] == "-f" {
+    var dPath = CommandLine.arguments[2]
+}
+else {
+    var dPath = CommandLine.arguments[1]
+}
+
+// Check if said file is deletable
+
+if FM.isDeletableFile(atPath: dPath) == true && CommandLine.arguments[1] == "-f" {
+    // If it is, delete it
+    do {
+        try FM.removeItem(atPath: dPath)
+    } catch {
+        // If there's an error whilst removing the file, report it
+        print(error)
+    }
+}
+else {
+    // otherwise, print that the user has no permission to delete this file.
+    print("\(progName): permission denied")
 }
