@@ -22,17 +22,17 @@ if CommandLine.argc == 1 {
 }
 
 // Command line argument for taking directory path
+let dPath = CommandLine.arguments[1]
 
-if CommandLine.argc > 1 && CommandLine.arguments[1] == "-f" {
-    var dPath = CommandLine.arguments[2]
-}
-else {
-    var dPath = CommandLine.arguments[1]
-}
+/* 
+ * The command below doesn't work, will fix later 
+ *
+if CommandLine.argc > 1 && CommandLine.arguments[1] == "-f" { var dPath = CommandLine.arguments[2] }
+ */
 
-// Check if said file is deletable
+// Check if said file exists
 
-if FM.isDeletableFile(atPath: dPath) == true && CommandLine.arguments[1] == "-f" {
+if FM.fileExists(atPath: dPath) {
     // If it is, delete it
     do {
         try FM.removeItem(atPath: dPath)
@@ -42,6 +42,6 @@ if FM.isDeletableFile(atPath: dPath) == true && CommandLine.arguments[1] == "-f"
     }
 }
 else {
-    // otherwise, print that the user has no permission to delete this file.
+    // otherwise, print that the user can't delete the file
     print("\(progName): permission denied")
 }
