@@ -11,70 +11,76 @@
 
 import Foundation
 
-var operand = CommandLine.arguments[1]
-let tn = CommandLine.arguments[2]
-let tnn = CommandLine.arguments[3]
-let tnIsEmpty = tn.isEmpty
+var arg1 = CommandLine.arguments[1]
+let arg2 = CommandLine.arguments[2]
+let arg3 = CommandLine.arguments[3]
+let arg2IsEmpty = arg2.isEmpty
 
-if tnn.isEmpty == true { let tnn = 0 }
+if arg3.isEmpty == true { let tnn = 0 }
 
-switch operand {
-    case "-z":
-        if tnIsEmpty == true { 
-            print("var1 is empty.") 
-            }
-        else {
-            print("var1 isn't empty.") 
-            }
-    case "-n":
-        if tnIsEmpty == false { 
-            print("var1 isn't empty.") 
-            }
-        else {
-            print("var1 is empty.") 
-            }    
-    case "-eq":
-        if tn == tnn {
-            print("\(tn) = \(tnn)")
+
+if arg1 == "-z" {
+    if arg2IsEmpty == true { 
+        print("var1 is empty.")
+    }
+    else {
+        print("var1 isn't empty.") 
+        }
+}
+
+if arg1 == "-n" {
+    if arg2IsEmpty == false { 
+        print("var1 isn't empty.") 
+    }
+    else {
+        print("var1 is empty.") 
+    }    
+}
+
+switch tn {
+    case "-eq" | "=":
+        if arg1 == arg3 {
+            print("NCString.StrIsEqual")
         }
         else {
-            print("\(tn) !=  \(tnn)")
+            print("NCString.StrIsnotEqual")
         }
-    case "-ne":
-        if tn != tnn {
-            print("\(tn) != \(tnn)")
-        }
-        else {
-            print("\(tn) = \(tnn)")
-        }
-    case "-gt":
-        if tn > tnn {
-            print("\(tn) > \(tnn)")
+    case "-ne" | "!=":
+        if arg1 != arg3 {
+            print("NCString.StrIsnotEqual")
         }
         else {
-            print("\(tn) < \(tnn)")
-        }
-    case "-lt":
-        if tn < tnn {
-            print("\(tn) < \(tnn)")
-        }
-        else {
-            print("\(tn) > \(tnn)")
+            print("NCString.StrIsEqual")
         }
     case "-ge":
-        if tn >= tnn {
-            print("\(tn) >= \(tnn)")
+        if arg1 >= arg3 {
+            print("NCString.StrIsGrorEq")
         }
         else {
-            print("\(tn) <= \(tnn)")
+            print("NCString.StrIsNotGrorEq")
+        }
+    case "-gt":
+        if arg1 > arg3 {
+            print("NCString.StrIsGrThan")
+        }
+        else {
+            print("NCString.StrIsNotGrThan")
         }
     case "-le":
-        if tn <= tnn {
-            print("\(tn) <= \(tnn)")
+        if arg1 <= arg3 {
+            print("NCString.StrIsLeorEq")
         }
         else {
-            print("\(tn) >= \(tnn)")
+            print("NCString.StrIsNotLeorEq")
+        }
+    case "-lt":
+        if arg1 < arg3 {
+            print("NCString.StrIsLeThan")
+        }
+        else {
+            print("NCString.StrIsNotLeThan")
         }
     default:
-        print("test: No command given")
+        print("")
 }
+

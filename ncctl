@@ -35,7 +35,7 @@ install() {
         echo "$0: Installation successful."
         exit 0
     else
-        echo "$0: Unknown error?"
+        echo "$0: Unknown error? Kind of ignore as this prints it everytime it succeeds."
     fi    
 }
 
