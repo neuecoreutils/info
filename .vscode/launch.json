@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Test coreutils",
+            "program": "${workspaceFolder:coreutils}/.build/debug/coreutilsPackageTests.xctest",
+            "cwd": "${workspaceFolder:coreutils}",
+            "preLaunchTask": "swift: Build All"
+        }
+    ]
+}
