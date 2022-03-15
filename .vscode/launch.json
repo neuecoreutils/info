@@ -7,6 +7,56 @@
             "program": "${workspaceFolder:coreutils}/.build/debug/coreutilsPackageTests.xctest",
             "cwd": "${workspaceFolder:coreutils}",
             "preLaunchTask": "swift: Build All"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Test uname",
+            "program": "${workspaceFolder:coreutils}/.build/debug/unamePackageTests.xctest",
+            "cwd": "${workspaceFolder:coreutils}",
+            "preLaunchTask": "swift: Build All"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Test swift-sysctl",
+            "program": "${workspaceFolder:coreutils}/Libraries/swift-sysctl/.build/debug/swift-sysctlPackageTests.xctest",
+            "cwd": "${workspaceFolder:coreutils}/Libraries/swift-sysctl",
+            "preLaunchTask": "swift: Build All (Libraries/swift-sysctl)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Test Sysctl",
+            "program": "${workspaceFolder:coreutils}/Libraries/swift-sysctl/.build/debug/SysctlPackageTests.xctest",
+            "cwd": "${workspaceFolder:coreutils}/Libraries/swift-sysctl",
+            "preLaunchTask": "swift: Build All (Libraries/swift-sysctl)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug RainbowPlayground (Libraries/Rainbow)",
+            "program": "${workspaceFolder:coreutils}/Libraries/Rainbow/.build/debug/RainbowPlayground",
+            "args": [],
+            "cwd": "${workspaceFolder:coreutils}/Libraries/Rainbow",
+            "preLaunchTask": "swift: Build Debug RainbowPlayground (Libraries/Rainbow)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release RainbowPlayground (Libraries/Rainbow)",
+            "program": "${workspaceFolder:coreutils}/Libraries/Rainbow/.build/release/RainbowPlayground",
+            "args": [],
+            "cwd": "${workspaceFolder:coreutils}/Libraries/Rainbow",
+            "preLaunchTask": "swift: Build Release RainbowPlayground (Libraries/Rainbow)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Test Rainbow",
+            "program": "${workspaceFolder:coreutils}/Libraries/Rainbow/.build/debug/RainbowPackageTests.xctest",
+            "cwd": "${workspaceFolder:coreutils}/Libraries/Rainbow",
+            "preLaunchTask": "swift: Build All (Libraries/Rainbow)"
         }
     ]
 }
