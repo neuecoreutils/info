@@ -60,7 +60,6 @@ else if argc > 1 && argv[1] == "--version" {
     print("uname (neueCoreutils) 0.2a")
     print("Copyright (C) 2022 WDXP.\n")
     print("Licensed under the MIT License.")
-    
 }
 else {
     print(sysname!)
