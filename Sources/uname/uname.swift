@@ -30,7 +30,7 @@ let release = withUnsafePointer(to: &sysinfo.release) {
         ptr in String.init(validatingUTF8: ptr)
     }
 }
-let version = withUnsafePointer(to: &sysinfo.version) {
+let ver = withUnsafePointer(to: &sysinfo.version) {
     $0.withMemoryRebound(to: CChar.self, capacity: 1) {
         ptr in String.init(validatingUTF8: ptr)
     }
