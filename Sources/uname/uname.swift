@@ -56,10 +56,16 @@ else if argc > 1 && argv[1] == "-v" {
 else if argc > 1 && argv[1] == "-m" {
     print(mach!)
 }
+else if argc > 1 && argv[1] == "-a" {
+    print("\(sysname!) \(mach!) \(hostname!) \(release!) \(ver!)")
+}
 else if argc > 1 && argv[1] == "--version" {
     print("uname (neueCoreutils) 0.2a")
     print("Copyright (C) 2022 WDXP.\n")
     print("Licensed under the MIT License.")
+}
+else if argc > 1 {
+    print("uname: invalid option -- '\(argv[1])'")
 }
 else {
     print(sysname!)
