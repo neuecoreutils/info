@@ -1,5 +1,5 @@
 /*
- *  touch.swift - Make a file.
+ *  touch.swift - change file timestamps
  *
  *  Part of neueCoreutils.
  *

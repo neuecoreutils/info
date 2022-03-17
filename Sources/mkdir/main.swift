@@ -29,7 +29,6 @@ var dPath = CommandLine.arguments[1]
 
 do {
     try FM.createDirectory(atPath: dPath, withIntermediateDirectories: true, attributes: nil)
-    print("Made directory at \(dPath).")
 } 
 catch {
     print(error)

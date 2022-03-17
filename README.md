@@ -10,3 +10,14 @@ The sole purpose of this branch is to rewrite all the mistakes in neueCoreutils 
 
 Some of the applications like `test` will temporarily have its development stopped.
 
+## PROGRESS
+
+`test` - removed
+`date` - removed
+`uname` - rewritten in Swift (cannot take multiple arguments)
+`ls` - halted
+`cp` - halted
+`mv` - halted
+`rm` - halted
+`touch` - halted
+`whoami` - theoretically complete
