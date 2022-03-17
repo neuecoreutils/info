@@ -6,7 +6,7 @@ neueCoreutils - Grand Reset Branch
 </p>
 
 
-The sole purpose of this branch is to rewrite all the mistakes in neueCoreutils and reset the whole repository.
+The sole purpose of this branch is to rewrite all the previous mistakes in neueCoreutils and reset the whole repository in general.
 
 Some of the applications like `test` will temporarily have its development stopped.
 
