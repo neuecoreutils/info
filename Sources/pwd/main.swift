@@ -1,5 +1,10 @@
 import Foundation
 
-let cwd = FileManager.default.currentDirectoryPath
+var cwd = FileManager.default.currentDirectoryPath
 
-print(cwd)
+var argc = CommandLine.argc
+var argv = CommandLine.arguments
+
+if argc == 1 {
+    print(cwd)
+}

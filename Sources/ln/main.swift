@@ -1,4 +1,6 @@
 /*
+ *  Copyright (C) 2022 WDXP.
+ * 
  *  ln.swift - Link a file or a directory.
  *
  *  Part of neueCoreutils.
@@ -17,14 +19,13 @@ if CommandLine.argc == 1 {
     print("\(progName): missing operand")
     exit(1)
 }
+var argv = CommandLine.arguments
+var argc = CommandLine.argc
 
-var fpath = CommandLine.arguments[2]
-var olink = CommandLine.arguments[3]
 
-
-if CommandLine.arguments[1] == "-s" {
+if argc > 1 && argv[1] == "-s" {
         try FM.createSymbolicLink(atPath: fpath, withDestinationPath: olink)
 }
-if CommandLine.arguments[1] == "-l" {
+if argc > 1 && argv[1] == "-l" {
         try FM.linkItem(atPath: fpath, toPath: olink)
 }

@@ -10,26 +10,37 @@
 
 import Foundation
 
-var progName = CommandLine.arguments[0]
+var pname = "mkdir"
 
 if CommandLine.argc == 1 {
-    print("\(progName): missing operand")
+    print("\(pname): missing operand")
     exit(1)
 }
 
 var FM = FileManager.default
-var dPath = CommandLine.arguments[1]
+var argc = CommandLine.argc
+var argv = CommandLine.arguments
+let verboseMode = 0
 
 
-
-
-// if FM.fileExists(atPath: dPath) {
-//     print("Error: directory already exists.")
-// }
-
-do {
-    try FM.createDirectory(atPath: dPath, withIntermediateDirectories: true, attributes: nil)
-} 
-catch {
-    print(error)
+if argc > 1 && argv[1].hasPrefix("-") == true &&
+               argv[1].contains("v") == true {
+    let verboseMode = 1
 }
+
+if argc > 1 && argv[1].hasPrefix("-") == true &&
+               argv[1].contains("p") == true {
+    let dPath = CommandLine.arguments[2]
+    do {
+        try FM.createDirectory(atPath: dPath, 
+                               withIntermediateDirectories: true, 
+                               attributes: nil)
+        if verboseMode == 1 {
+            print("\(pname): created directory \(dPath).")
+        }
+    } 
+    catch {
+        print(error)
+    }
+}
+
