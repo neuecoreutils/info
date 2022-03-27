@@ -16,7 +16,7 @@ Make neueCoreutils a freestanding single binary, like `Busybox`.
 
 ### **Proposal NCP-H1-1B - repackage Swift object files**
 
-Compile and package the standard Swift library and give it along with neueCoreutils.
+Package the standard Swift library and give it along with neueCoreutils.
 
 **Pros:**
 * Light coreutils binary
@@ -25,5 +25,7 @@ Compile and package the standard Swift library and give it along with neueCoreut
 **Cons:**
 * Rigorous testing would need to be made
 * May or may not be illegal w.r.t. Apple Public Source License <!-- Needs to be checked! -->
+
+A version with the tag `0.2a-PH1A*` shall be initiated for wider testing of both proposals.
 
 #### **Chosen proposal: <!-- TBA -->**
