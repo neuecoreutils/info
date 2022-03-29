@@ -9,14 +9,12 @@
  */
 
 import Foundation
+var argc = CommandLine.argc
+var argv = CommandLine.arguments
+let pname = "whoami"
 
 let fullname = NSFullUserName()
 let username = NSUserName()
-
-var argc = CommandLine.argc
-var argv = CommandLine.arguments
-
-let pname = "whoami"
 
 if argc == 1 {
     print("\(username)")

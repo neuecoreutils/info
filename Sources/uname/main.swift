@@ -8,18 +8,18 @@
  */
 
 import Foundation
-
+var argc = CommandLine.argc
 var argv = CommandLine.arguments
-var argc =  CommandLine.argc
-var pname = "uname"
+let pname = "uname"
+
 var sysinfo = utsname()
 
 uname(&sysinfo)
 
 /*
- *  uname uses the actual utsname functions to get all the sy 
- * 
- * 
+ *  uname uses the actual utsname functions to get all the system
+ *  information.
+ *  =============================================================
  */
 let machine = withUnsafePointer(to: &sysinfo.machine) {
     $0.withMemoryRebound(to: CChar.self, capacity: 1) {

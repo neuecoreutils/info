@@ -11,22 +11,9 @@
 import Foundation
 
 var FM = FileManager.default
-var verNum = "1.0"
-var progName = CommandLine.arguments[0]
 
-if CommandLine.argc == 1 {
-    print("\(progName): missing operand")
-    exit(1)
-}
+var argc = CommandLine.argc
+var argv = CommandLine.arguments
 
-let cpitem = CommandLine.arguments[1]
-let todir = CommandLine.arguments[2]
-
-/////////////////////////////////////////////////////
-    do {
-        try FM.copyItem(atPath: cpitem, toPath: todir)
-    } catch {
-        print(error)
-    }
-////////////////////////////////////////////////////
+let pname = "cp"
 

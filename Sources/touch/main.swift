@@ -11,17 +11,8 @@
 import Foundation
 
 var FM = FileManager.default
-var progName = CommandLine.arguments[0]
 
-if CommandLine.argc == 1 {
-    print("\(progName): missing operand")
-    exit(1)
-}
+var argc = CommandLine.argc
+var argv = CommandLine.arguments
 
-var fPath = CommandLine.arguments[1]
-
-do {
-    FM.createFile(atPath: fPath, contents: nil, attributes: nil)
-} catch {
-    print(error)
-}
+let pname = "touch"
