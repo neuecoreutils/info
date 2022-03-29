@@ -36,5 +36,6 @@ if argc == 2 {
 }
 
 if argc == 3 {
-    copyFile(from: argv[1], to: argv[2])
+    let toDir: String = "\(argv[2])/\(argv[1])"
+    copyFile(from: argv[1], to: toDir)
 }
