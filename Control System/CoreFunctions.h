@@ -1,5 +1,5 @@
 /*
- * cutils - main coreutilsCTL file
+ * CoreFunctions.h
  * 
  */
 
@@ -65,3 +65,4 @@ int lswd() {
 int chwd(char *dir) {
     chdir(dir);
 }
+
