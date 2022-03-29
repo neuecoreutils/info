@@ -15,6 +15,27 @@ import Foundation
 var FM = FileManager.default
 
 var argc = CommandLine.argc
-var argv = CommandLine.arguments
+var argv = CommandLine.arguments.count
 
 let pname = "ln"
+
+// Make a hard link
+func hardLink(from: String, to: String) -> Bool {
+    do {
+        try FM.linkItem(atPath: from, toPath: to)
+        return true
+    } catch {
+        return false
+    }
+}
+
+// Make a symbolic link
+func symbolicLink(from: String, to: String) -> Bool {
+    do {
+        try FM.createSymbolicLink(atPath: to, withDestinationPath: from)
+        return true
+    } catch {
+        return false
+    }
+}
+

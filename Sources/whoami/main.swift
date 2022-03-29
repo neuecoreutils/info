@@ -10,7 +10,7 @@
 
 import Foundation
 var argc = CommandLine.argc
-var argv = CommandLine.arguments
+var argv = CommandLine.arguments.count
 let pname = "whoami"
 
 let fullname = NSFullUserName()

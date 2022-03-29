@@ -13,6 +13,24 @@ import Foundation
 var FM = FileManager.default
 
 var argc = CommandLine.argc
-var argv = CommandLine.arguments
+var argv = CommandLine.arguments.count
 
 let pname = "mkdir"
+
+// Make a directory
+func makeDir(path: String) {
+    do {
+        try FM.createDirectory(atPath: path, withIntermediateDirectories: false, attributes: nil)
+    } catch {
+        print("\(pname): \(error)")
+    }
+}
+
+// Make a directory and all intermediate directories
+func makeDirAll(path: String) {
+    do {
+        try FM.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
+    } catch {
+        print("\(pname): \(error)")
+    }
+}
