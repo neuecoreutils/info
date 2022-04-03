@@ -2,7 +2,27 @@ import Foundation
 
 var FM = FileManager.default
 
-var argc = CommandLine.argc
-var argv = CommandLine.arguments.count
+var argc = CommandLine.arguments.count
+var argv = CommandLine.arguments
 
 let pname = "pwd"
+
+// print current working directory
+func printCurrentWorkingDirectory() {
+    do {
+        let path = try FM.currentDirectoryPath
+        print(path)
+    } catch {
+        print("\(pname): \(error)")
+    }
+}
+
+// print the target directory of a symbolic link
+func printTargetDirectory(of: String) {
+    do {
+        let path = try FM.destinationOfSymbolicLink(atPath: of)
+        print(path)
+    } catch {
+        print("\(pname): \(error)")
+    }
+}

@@ -12,7 +12,16 @@ import Foundation
 
 var FM = FileManager.default
 
-var argc = CommandLine.argc
-var argv = CommandLine.arguments.count
+var argc = CommandLine.arguments.count
+var argv = CommandLine.arguments
 
 let pname = "touch"
+
+// Make a file
+func touch(path: String) {
+    do {
+        try FM.createFile(atPath: path, contents: nil, attributes: nil)
+    } catch {
+        print("\(pname): cannot create '\(path)': \(error)")
+    }
+}

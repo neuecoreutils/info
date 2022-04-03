@@ -12,7 +12,16 @@ import Foundation
 
 var FM = FileManager.default
 
-var argc = CommandLine.argc
-var argv = CommandLine.arguments.count
+var argc = CommandLine.arguments.count
+var argv = CommandLine.arguments
 
 let pname = "rm"
+
+// remove a file
+func rm(path: String) {
+    do {
+        try FM.removeItem(atPath: path)
+    } catch {
+        print("rm: cannot remove '\(path)': \(error)")
+    }
+}
