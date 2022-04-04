@@ -1,13 +1,8 @@
 /*
  *  Copyright (C) 2022 WDXP.
- * 
- *  ln.swift - Link a file or a directory.
+ *  SPDX-License-Identifier: MIT
  *
- *  Part of neueCoreutils.
- *
- *  This software is freely distributable under the MIT License.
- *  Check <LICENSE> for more information.
- * 
+ *  Part of the neueCoreutils Project.
  */
 
 import Foundation
@@ -39,3 +34,20 @@ func symbolicLink(from: String, to: String) -> Bool {
     }
 }
 
+if argc == 1 {
+    print("\(pname): missing file operand")
+    exit(1)
+}
+
+if argc == 2 {
+    print("\(pname): coreutils.err.ArgcEqualsToTwo") // sorry, will finish later :p
+    exit(1)
+}
+
+if argc == 3 {
+    hardLink(from: argv[1], to: argv[2])
+}
+
+if argc == 4 && argv[1] == "-s" {
+    symbolicLink(from: argv[2], to: argv[3])
+}

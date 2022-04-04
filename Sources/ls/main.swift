@@ -1,11 +1,8 @@
 /*
- *  ls.swift - List files in a directory.
+ *  Copyright (C) 2022 WDXP.
+ *  SPDX-License-Identifier: MIT
  *
- *  Part of neueCoreutils.
- *
- *  This software is freely distributable under the MIT License.
- *  Check <LICENSE> for more information.
- * 
+ *  Part of the neueCoreutils Project.
  */
 
 import Foundation

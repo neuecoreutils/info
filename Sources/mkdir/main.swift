@@ -1,11 +1,8 @@
 /*
- *  mkdir.swift - Make a directory.
+ *  Copyright (C) 2022 WDXP.
+ *  SPDX-License-Identifier: MIT
  *
- *  Part of neueCoreutils.
- *
- *  This software is freely distributable under the MIT License.
- *  Check <LICENSE> for more information.
- * 
+ *  Part of the neueCoreutils Project.
  */
 
 import Foundation
@@ -45,8 +42,7 @@ if argc < 2 {
 var path = ""
 var mode = "p"
 
-for arg in argv {
-    if arg == "--help" {
+for arg in argv { if arg == "--help" {
         print("Usage: \(pname) [OPTION]... DIRECTORY...")
         print("  or:  \(pname) [OPTION]... -- DIR...")
         print("Create the DIRECTORY(ies), if they do not already exist.")
@@ -58,4 +54,4 @@ for arg in argv {
         print("")
         print("Report mkdir bugs to 'https://ng-ux.github.io/neuecoreutils/issues'.")
         print("Part of neueCoreutils. Check it out at 'https://ng-ux.github.io/neuecoreutils'.")
-        exit(0)
+        exit(0) }}
