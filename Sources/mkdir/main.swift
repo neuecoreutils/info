@@ -39,19 +39,20 @@ if argc < 2 {
     exit(1)
 }
 
-var path = ""
-var mode = "p"
+// Print help!
 
-for arg in argv { if arg == "--help" {
-        print("Usage: \(pname) [OPTION]... DIRECTORY...")
-        print("  or:  \(pname) [OPTION]... -- DIR...")
-        print("Create the DIRECTORY(ies), if they do not already exist.")
-        print("")
-        print("  -p, --parents   no error if existing, make parent directories as needed")
-        print("  -m, --mode=MODE  set file mode (as in chmod), not a=rwx - umask")
-        print("")
-        print("With no arguments, create a directory in the current directory.")
-        print("")
-        print("Report mkdir bugs to 'https://ng-ux.github.io/neuecoreutils/issues'.")
-        print("Part of neueCoreutils. Check it out at 'https://ng-ux.github.io/neuecoreutils'.")
-        exit(0) }}
+    if argv[1] == "--help" {
+        print("Usage: \(pname) [OPTION]... DIRECTORY...\n")
+        print("Create the DIRECTORY(ies), if they do not already exist.\n")
+        print("     -p, --parents   no error if existing, make parent directories as needed\n")  
+        print("With no arguments, create a directory in the current directory.\n")
+        print("Report mkdir bugs to 'https://ngux.github.io/neuecoreutils/issues'.")
+        print("Part of neueCoreutils. Check it out at 'https://ngux.github.io/neuecoreutils'.")
+        exit(0) 
+    }
+
+    if argv[1] == "-p" {
+        do { makeDirAll(path: argv[2]) } catch { print(error) } 
+    }
+
+    makeDir(path: argv[1])

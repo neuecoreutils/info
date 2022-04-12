@@ -8,7 +8,6 @@
 import Foundation
 
 var FM = FileManager.default
-
 var argc = CommandLine.arguments.count
 var argv = CommandLine.arguments
 

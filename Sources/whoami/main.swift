@@ -1,4 +1,6 @@
 /*
+ *  whoami - Prints the user's login name.
+ *  
  *  Copyright (C) 2022 WDXP.
  *  SPDX-License-Identifier: MIT
  *
