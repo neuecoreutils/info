@@ -22,3 +22,34 @@ func touch(path: String) {
         print("\(pname): cannot create '\(path)': \(error)")
     }
 }
+
+if argc > 1 && argv[1] == ("--version") {
+    print("""
+    \(pname) (neueCoreutils) 0.2a
+    Copyright (C) 2022 WDXP.
+
+    Licensed under MIT.
+    """)
+    }
+
+else if argc > 1 && argv[1] == ("--help") {
+    print("""
+    Usage: \(pname) <OPTION>...
+    Update the access and modification times of each FILE to the current time.
+
+             --help               display this message and exit
+             --version            display version information and exit
+    """)
+    }
+
+
+else if argc == 1 {
+    touch(path: argv[1])
+}
+
+else {
+    print("""
+    \(pname): invalid option: '\(argv[1])'
+    Try 'whoami --help' for more information.
+    """)
+}
