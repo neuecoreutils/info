@@ -13,6 +13,8 @@ var argc = CommandLine.arguments.count
 var argv = CommandLine.arguments
 
 let pname = "touch"
+let desc = "Update the access and modification times of each FILE to the current time."
+
 
 // Make a file
 func touch(path: String) {
@@ -35,7 +37,7 @@ if argc > 1 && argv[1] == ("--version") {
 else if argc > 1 && argv[1] == ("--help") {
     print("""
     Usage: \(pname) <OPTION>...
-    Update the access and modification times of each FILE to the current time.
+    \(desc)
 
              --help               display this message and exit
              --version            display version information and exit
@@ -50,6 +52,6 @@ else if argc == 1 {
 else {
     print("""
     \(pname): invalid option: '\(argv[1])'
-    Try 'whoami --help' for more information.
+    Try '\(pname) --help' for more information.
     """)
 }

@@ -11,7 +11,6 @@ var FM = FileManager.default
 
 var argc = CommandLine.arguments.count
 var argv = CommandLine.arguments
-
 let pname = "mv"
 
 // Move a file

@@ -9,6 +9,8 @@ import Foundation
 var argc = CommandLine.arguments.count
 var argv = CommandLine.arguments
 let pname = "uname"
+let desc = "Print system information. If ran without any option, same as '-s'."
+
 
 var sysinfo = utsname()
 
@@ -69,8 +71,8 @@ if argc > 1 && argv[1].hasPrefix("--") &&
 if argc > 1 && argv[1].hasPrefix("--") && 
         argv[1].contains("help") == true {
     print("""
-    Usage: uname <OPTION>...
-    Print system information. If ran without any option, same as '-s'.
+    Usage: \(pname) <OPTION>...
+    \(desc)
 
         -a   -all                    print all information.
 
