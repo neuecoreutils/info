@@ -4,12 +4,12 @@ README.md
 neueCoreutils markdown
 -->
 
-neueCoreutils is a suite of utilities meant to feel and act like `bsdutils` and the GNU coreutils.
+# neuecoreutils
+
+neueCoreutils is a suite of utilities written in Swift meant to feel and act like `bsdutils` and the GNU coreutils.
 
 neueCoreutils aims to be POSIX-compliant with some modifications.
 
-## Downloads
+Each individual utility has its own Git repository as it is easier to work with them individually.
 
-Current builds require Swift version 5.6.
-We currently don't offer binaries.
-
+If you want to compile neuecoreutils, [visit this link.](https://github.com/neuecoreutils/neuecoreutils)
